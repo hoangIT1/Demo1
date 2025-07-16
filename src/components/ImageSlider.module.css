@@ -3,10 +3,9 @@
 /* --- Container chính của cả section slider --- */
 .sliderSection {
   width: 100%;
-  /* SỬA LỖI: Bỏ hết padding để slider tràn viền hoàn toàn */
+  /* Bỏ hết padding để slider tràn viền hoàn toàn */
   padding: 0; 
   box-sizing: border-box;
-  /* Thêm một lớp màu tối nhẹ phủ lên để tăng độ tương phản cho text nếu cần */
   position: relative; 
 }
 
@@ -18,24 +17,19 @@
 
 /* --- Style cho từng slide --- */
 .swiperSlide {
-  width: 55%; /* Điều chỉnh độ rộng của một slide */
+  width: 55%; 
   max-width: 700px;
   height: 100%;
   
-  /* SỬA LỖI: Thêm cả transform vào transition để hiệu ứng scale mượt mà */
+  /* Thêm transform vào transition để hiệu ứng scale mượt mà */
   transition: opacity 0.6s ease, transform 0.6s ease;
   
-  /* Mặc định, tất cả các slide sẽ hơi mờ và nhỏ lại một chút */
-  opacity: 0.5;
   transform: scale(0.9);
 }
 
-/* --- SỬA LỖI: Style cho slide ở giữa (slide active) --- */
-/* Dùng selector với độ ưu tiên cao hơn để đảm bảo nó được áp dụng */
 .swiperSlide.swiper-slide-active {
-  opacity: 1 !important; /* Quan trọng: Làm cho slide ở giữa rõ nét hoàn toàn */
-  transform: scale(1) !important; /* Quan trọng: Phóng to slide về kích thước gốc */
-  z-index: 1; /* Đảm bảo slide active nằm trên các slide khác */
+  transform: scale(1) !important; 
+  z-index: 1 !important;
 }
 
 /* --- Style cho ảnh bên trong slide --- */

@@ -16,11 +16,11 @@ const WLight1: FunctionComponent = () => {
         <section className={`${styles.heroSection} ${styles.sectionPadding}`}>
           <div className={styles.centeredContent}>
             <h1 className={styles.mainTitle}>
-              MISTER
+              MISTER KING
               <br />
               INTERNATIONAL
             </h1>
-            <h2 className={styles.subTitle}>- Distinctively Confident -</h2>
+            <h2 className={styles.subTitle}>- Become King of All Men's -</h2>
           </div>
         </section>
 
@@ -31,28 +31,23 @@ const WLight1: FunctionComponent = () => {
         <section className={`${styles.infoSection} ${styles.sectionPadding}`}>
           <div className={styles.centeredContent}>
             <h2 className={styles.sectionTitle}>WHO WE ARE</h2>
-            {/* ... nội dung còn lại giữ nguyên ... */}
+            
             <p className={styles.paragraph}>
-              The Mister International Organization (MIO) is a global, inclusive
-              organization that celebrates all cultures, backgrounds and
-              religions. We create and provide a safe space for men to share
-              their stories and drive impact personally, professionally, and
-              philanthropically. The men who participate in this international
-              platform serve as inspirational leaders and role models to their
-              communities and fans around the world.
+              The Mister King International Organization (MKIO) is a global, inclusive organization that celebrates all cultures, backgrounds and religions. We create and provide a safe space for men to share their stories and drive impact personally, professionally, and philanthropically. The men who participate in this international platform serve as inspirational leaders and role models to their communities and fans around the world. 
             </p>
             <h2 className={styles.sectionTitle}>OUR INITIATIVES</h2>
             <p className={styles.paragraph}>
-              MIO prioritizes giving back to our communities through an
-              international platform of charitable partnerships. As leaders and
-              role models, our delegates and titleholders create positive
-              change by volunteering, fundraising, and advocacy.
+              MKIO prioritizes contributing to our communities through an international platform of charitable partnerships. As leaders and role models, our delegates and title holders create positive change through volunteering, fundraising and advocacy, from environmental awareness to an eco-friendly planet, against global warming and environmental protection.
             </p>
           </div>
+          </section>
+        
+        {/* Full width image Section*/}
+        <section className={styles.infoSection}>
           <img
             className={styles.fullWidthImage}
             alt="Stage with contestants"
-            src="/container-1@2x.png"
+            src="/Picture1.jpg"
           />
         </section>
 
@@ -62,12 +57,7 @@ const WLight1: FunctionComponent = () => {
           <div className={styles.centeredContent}>
             <h2 className={styles.sectionTitle}>WHAT DRIVES US</h2>
             <p className={styles.paragraph}>
-              The Mister International Organization exists to advocate for a
-              future forged by men - men with the courage to push the limits of
-              what’s possible, who are curious enough to make world-shaking
-              discoveries, and audacious enough to do this over and over. We
-              believe that the future of humanity rests on reaching gender
-              equity around the world.
+              The Mister King International Organization exists to advocate for a future forged by men - men with the courage to push the limits of what’s possible, who are curious enough to make world-shaking discoveries, and audacious enough to do this over and over. We believe that the future of humanity rests on reaching gender equity around the world.
             </p>
           </div>
 
@@ -75,31 +65,23 @@ const WLight1: FunctionComponent = () => {
             <div className={styles.column}>
               <h3 className={styles.columnTitle}>RUN FOR MEN</h3>
               <p className={styles.paragraph}>
-                MIO empowers men to realize their Personal, Professional and
-                ambition and build self-confidence as a catalyst for future
-                success. The MIO community is a brotherhood that is committed to
-                uplifting one another. We celebrate handsomeness, All form of
-                it, And Provide the tools that help men to feel their most
-                handsome.
+                MKIO enables men to realize their personal and professional ambitions and develop their self-confidence as a catalyst for future success.  The MKIO community is a family of brotherhood committed to encouraging one another.  We celebrate beauty, in all its forms, and provide the tools that help men feel their most beautiful.
               </p>
               <img
                 className={styles.columnImage}
                 alt="Run for men"
-                src="/container-2@2x.png"
+                src="/Copy of IG8.jpg"
               />
             </div>
             <div className={styles.column}>
               <h3 className={styles.columnTitle}>CREATING OPPORTUNITIES</h3>
               <p className={styles.paragraph}>
-                MIO delegates and titleholders are able to cultivate their
-                personal, professional, and philanthropic goals. These young
-                men are forward-thinking and motivated not just to talk about
-                change, but to enact it.
+                MKIO delegates and incumbents are able to cultivate their personal, professional, and philanthropic goals. These young men are forward-thinking and motivated not only to talk about change, but also to conceptualize and implement social projects beneficial to the well-being of their communities and even the world.
               </p>
               <img
                 className={styles.columnImage}
                 alt="Creating opportunities"
-                src="/container-3@2x.png"
+                src="/Copy of IG7.jpg"
               />
             </div>
           </div>

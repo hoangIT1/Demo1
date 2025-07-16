@@ -16,6 +16,11 @@
   box-sizing: border-box;
 }
 
+.heroPadding {
+  padding: 4rem 5% 2rem 5%;
+  box-sizing: border-box;
+}
+
 /* --- Hero Section --- */
 .heroSection {
   background-color: var(--color-whitesmoke);
@@ -74,11 +79,12 @@
 }
 
 .fullWidthImage {
-  width: 100%;
+  width: 100vw;
   height: auto;
   max-height: 500px;
   object-fit: cover; /* Đảm bảo ảnh không bị méo */
-  margin-top: 2rem;
+  margin-left: calc(-50vw + 50%);
+  display: block;
 }
 
 /* --- Two Columns Section --- */
@@ -93,6 +99,8 @@
 .column {
   flex: 1;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .columnTitle {
@@ -106,14 +114,19 @@
 .columnImage {
   width: 100%;
   max-width: 400px; /* Giới hạn độ rộng ảnh */
-  height: auto;
-  margin-top: 1.5rem;
+  height: 300px;
+  object-fit: cover;
+  margin-top: auto;
 }
 
 /* --- Media Queries for Desktop --- */
 @media (min-width: 768px) {
   .sectionPadding {
     padding: 5rem 5%;
+  }
+
+  .heroPadding {
+    padding: 5rem 5% 3rem 5%;
   }
 
   .mainTitle {

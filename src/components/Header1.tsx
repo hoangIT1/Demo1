@@ -19,7 +19,7 @@ const Header1: FunctionComponent<Header1Type> = ({ className = "" }) => {
             className={styles.logo}
             loading="lazy"
             alt="Mister International Logo"
-            src="/container@2x.png" // Giữ lại src logo của bạn
+            src="/Copy of IG0.png" // Giữ lại src logo của bạn
           />
         </a>
 
@@ -41,10 +41,10 @@ const Header1: FunctionComponent<Header1Type> = ({ className = "" }) => {
         <div className={`${styles.menu} ${isMenuOpen ? styles.menuOpen : ""}`}>
           <nav className={styles.navLinks}>
             <a href="/">HOME</a>
-            <a href="#">NWAJAGU SAMUEL</a>
+            <a href="#">MARK ANTHONY</a>
             <a href="#">COMPETITION</a>
             <a href="#">NATIONAL DIRECTORS</a>
-            <a href="#">2025 CONTESTANTS</a>
+            <a href="#">CONTESTANTS</a>
             <a href="#">PRESS</a>
           </nav>
           <div className={styles.socialIcons}>
