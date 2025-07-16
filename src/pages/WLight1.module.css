@@ -81,8 +81,7 @@
 .fullWidthImage {
   width: 100vw;
   height: auto;
-  max-height: 500px;
-  object-fit: cover; /* Đảm bảo ảnh không bị méo */
+  max-height: 70vh; /* Giới hạn chiều cao tối đa là 70% chiều cao màn hình */
   margin-left: calc(-50vw + 50%);
   display: block;
 }
@@ -115,8 +114,9 @@
   width: 100%;
   max-width: 400px; /* Giới hạn độ rộng ảnh */
   height: 300px;
-  object-fit: cover;
+  object-fit: contain; /* SỬA Ở ĐÂY: Hiển thị toàn bộ ảnh trong khung */
   margin-top: auto;
+  align-self: center; /* Căn giữa ảnh trong cột */
 }
 
 /* --- Media Queries for Desktop --- */
@@ -147,5 +147,77 @@
 
   .twoColumns {
     flex-direction: row; /* Chuyển thành hàng ngang trên desktop */
+  }
+}
+
+.imageRow {
+  display: flex;
+  justify-content: center; /* Căn giữa 2 ảnh theo chiều ngang */
+  gap: 10px;               /* Khoảng cách nhỏ giữa 2 ảnh */
+  margin-top: auto;        /* Đẩy hàng ảnh xuống dưới cùng */
+}
+
+/* Áp dụng style chỉ cho ảnh bên trong .imageRow */
+.imageRow .columnImage {
+  height: 300px;          /* GIỮ NGUYÊN CHIỀU CAO 300px */
+  width: auto;            /* Chiều rộng tự động điều chỉnh theo tỷ lệ */
+  flex: 1;                /* Để 2 ảnh tự chia sẻ không gian chiều ngang */
+  object-fit: contain;    /* Đảm bảo ảnh không bị cắt hoặc méo */
+  margin-top: 0;          /* Bỏ margin-top thừa */
+  max-width: 50%;         /* Giới hạn để mỗi ảnh không chiếm quá nửa không gian */
+}
+
+/* --- Split Section (Image Left, Text Right) --- */
+.splitSection {
+  display: flex;
+  width: 100%;
+  background-color: var(--color-black); /* Màu nền dự phòng */
+}
+
+.splitImageColumn,
+.splitTextColumn {
+  flex: 1; /* Mỗi cột chiếm 50% chiều rộng */
+  display: flex; /* Dùng flex để căn giữa nội dung bên trong */
+  justify-content: center;
+  align-items: center;
+}
+
+.splitTextColumn {
+  background-color: var(--color-black);
+  padding: 4rem 2rem;
+}
+
+.splitImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Đảm bảo ảnh lấp đầy cột và có chiều cao bằng nhau */
+}
+
+.splitTextContent {
+  color: var(--color-white);
+  font-family: var(--font-inter);
+  max-width: 500px;
+}
+
+.splitTitle {
+  font-family: var(--font-raleway);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.splitParagraph {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Responsive cho màn hình nhỏ (mobile) --- */
+@media (max-width: 768px) {
+  .splitSection {
+    flex-direction: column; /* Xếp 2 cột theo chiều dọc */
+  }
+
+  .splitTextColumn {
+    padding: 3rem 1.5rem;
   }
 }

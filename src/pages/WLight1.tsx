@@ -67,11 +67,18 @@ const WLight1: FunctionComponent = () => {
               <p className={styles.paragraph}>
                 MKIO enables men to realize their personal and professional ambitions and develop their self-confidence as a catalyst for future success.  The MKIO community is a family of brotherhood committed to encouraging one another.  We celebrate beauty, in all its forms, and provide the tools that help men feel their most beautiful.
               </p>
-              <img
-                className={styles.columnImage}
-                alt="Run for men"
-                src="/Copy of IG8.jpg"
-              />
+              <div className={styles.imageRow}>
+                <img
+                  className={styles.columnImage}
+                  alt="Run for men"
+                  src="/Copy of IG8.jpg"
+                />
+                <img
+                  className={styles.columnImage}
+                  alt="Run for men"
+                  src="/Copy of IG9.jpg"
+                />
+              </div>
             </div>
             <div className={styles.column}>
               <h3 className={styles.columnTitle}>CREATING OPPORTUNITIES</h3>
@@ -86,6 +93,46 @@ const WLight1: FunctionComponent = () => {
             </div>
           </div>
         </section>
+
+        {/* ========================================================== */}
+        {/* === DÁN SECTION MỚI CỦA BẠN VÀO ĐÂY === */}
+        <section className={styles.splitSection}>
+
+          <div className={styles.splitTextColumn}>
+            <div className={styles.splitTextContent}>
+              <h3 className={styles.splitTitle}>Mister International</h3>
+              <p className={styles.splitParagraph}>
+                Created in 2006
+                <br />
+                Mister International is the World's Most Prestigious Male Pageant
+              </p>
+              <p className={styles.splitParagraph}>
+                More than 50 Countries
+              </p>
+              <p className={styles.splitParagraph}>
+                100 National Preliminary Pageants Throughout the World
+              </p>
+              <p className={styles.splitParagraph}>
+                Over Thousand Contestants Each Year and 1 Mister International
+                Finals Show
+              </p>
+              <p className={styles.splitParagraph}>
+                All International Show Watched by Millions of People WorldWide
+                Annually
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.splitImageColumn}>
+            <img
+              src="/Copy of IG10.jpg" // <-- Bạn có thể thay đổi ảnh này
+              alt="Mister International Stage"
+              className={styles.splitImage}
+            />
+          </div>
+
+        </section>
+        {/* ========================================================== */}
 
         <Section1 />
       </main>

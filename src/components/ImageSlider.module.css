@@ -1,27 +1,21 @@
-/* src/components/ImageSlider.module.css */
-
-/* --- Container chính của cả section slider --- */
 .sliderSection {
   width: 100%;
-  /* Bỏ hết padding để slider tràn viền hoàn toàn */
   padding: 0; 
   box-sizing: border-box;
   position: relative; 
 }
 
-/* --- Container của Swiper --- */
+
 .swiperContainer {
   width: 100%;
-  height: 450px; /* Có thể điều chỉnh chiều cao này */
+  height: 450px; 
 }
 
-/* --- Style cho từng slide --- */
 .swiperSlide {
   width: 55%; 
   max-width: 700px;
   height: 100%;
   
-  /* Thêm transform vào transition để hiệu ứng scale mượt mà */
   transition: opacity 0.6s ease, transform 0.6s ease;
   
   transform: scale(0.9);
@@ -32,21 +26,86 @@
   z-index: 1 !important;
 }
 
-/* --- Style cho ảnh bên trong slide --- */
+
 .swiperSlide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* --- Responsive cho màn hình nhỏ hơn (mobile) --- */
 @media (max-width: 768px) {
   .swiperContainer {
     height: 300px;
   }
 
   .swiperSlide {
-    width: 80%; /* Trên mobile, mỗi slide sẽ rộng hơn */
+    width: 80%; 
     transform: scale(0.85);
   }
 }
+
+
+
+
+/* .sliderSection {
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.swiperContainer {
+  width: 100%;
+  height: 450px;
+}
+
+.swiperSlide {
+  width: 55%;
+  max-width: 700px;
+  height: 100%;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: scale(0.9);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; 
+}
+
+.swiperSlide.swiper-slide-active {
+  transform: scale(1) !important;
+  z-index: 1 !important;
+}
+
+.slideBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  filter: blur(20px) brightness(0.6);
+  transform: scale(1.1); 
+  z-index: 1;
+}
+
+
+.slideImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  z-index: 2; 
+}
+
+@media (max-width: 768px) {
+  .swiperContainer {
+    height: 300px;
+  }
+
+  .swiperSlide {
+    width: 80%;
+    transform: scale(0.85);
+  }
+} */

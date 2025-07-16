@@ -72,3 +72,81 @@ const ImageSlider: FunctionComponent = () => {
 };
 
 export default ImageSlider;
+
+// // src/components/ImageSlider.tsx
+// import { FunctionComponent, useCallback } from "react";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Autoplay } from "swiper/modules";
+// import { Swiper as SwiperType } from "swiper";
+
+// import "swiper/css";
+// import "swiper/css/autoplay";
+// import styles from "./ImageSlider.module.css";
+
+// // Giữ nguyên danh sách ảnh, vì chúng được lấy từ thư mục public
+// const slideImages = [
+//   "/Copy of IG1.jpg",
+//   "/Copy of IG2.jpg",
+//   "/Copy of IG3.jpg",
+//   "/Copy of IG4.jpg",
+//   "/Copy of IG5.jpg",
+//   "/Copy of IG6.jpg",
+// ];
+
+// const ImageSlider: FunctionComponent = () => {
+//   const handleSlideChange = useCallback((swiper: SwiperType) => {
+//     swiper.slides.forEach((slide) => {
+//       slide.style.opacity = "0.8";
+//     });
+//     if (swiper.slides[swiper.activeIndex]) {
+//       swiper.slides[swiper.activeIndex].style.opacity = "1";
+//     }
+//   }, []);
+
+//   const handleSwiperInit = useCallback(
+//     (swiper: SwiperType) => {
+//       handleSlideChange(swiper);
+//     },
+//     [handleSlideChange]
+//   );
+
+//   return (
+//     <section className={styles.sliderSection}>
+//       <Swiper
+//         modules={[Autoplay]}
+//         loop={true}
+//         speed={1200}
+//         slidesPerView={"auto"}
+//         centeredSlides={true}
+//         slideToClickedSlide={true}
+//         spaceBetween={0} // Bỏ khoảng trắng giữa các slide
+//         autoplay={{
+//           delay: 3000,
+//           disableOnInteraction: false,
+//         }}
+//         onSwiper={handleSwiperInit}
+//         onSlideChange={handleSlideChange}
+//         className={styles.swiperContainer}
+//       >
+//         {slideImages.map((src, index) => (
+//           <SwiperSlide key={index} className={styles.swiperSlide}>
+//             {/* ẢNH NỀN MỜ (DÙNG THẺ IMG) */}
+//             <img
+//               className={styles.slideBackground}
+//               src={src}
+//               alt="" // Để trống alt vì đây là ảnh trang trí
+//             />
+//             {/* ẢNH CHÍNH, RÕ NÉT */}
+//             <img
+//               className={styles.slideImage}
+//               src={src}
+//               alt={`Slide ${index + 1}`}
+//             />
+//           </SwiperSlide>
+//         ))}
+//       </Swiper>
+//     </section>
+//   );
+// };
+
+// export default ImageSlider;
