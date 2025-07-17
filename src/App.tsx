@@ -6,6 +6,8 @@ import {
   useLocation,
 } from "react-router-dom";
 import WLight1 from "./pages/WLight1";
+import MarkAnthonyPage from "./pages/MarkAnthony"; // <--- THÊM DÒNG NÀY
+import CompetitionPage from "./pages/Competition";
 
 function App() {
   const action = useNavigationType();
@@ -24,12 +26,13 @@ function App() {
 
     switch (pathname) {
       case "/":
-        title = "";
-        metaDescription = "";
+        title = "Home"; // Có thể đặt title cho trang chủ
+        metaDescription = "Welcome to the main page.";
         break;
-      case "/1920w-light":
-        title = "";
-        metaDescription = "";
+      // THÊM CASE CHO TRANG MỚI
+      case "/mark-anthony":
+        title = "Mark Anthony";
+        metaDescription = "Information about Mark Anthony.";
         break;
     }
 
@@ -50,6 +53,8 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<WLight1 />} />
+      <Route path="/mark-anthony" element={<MarkAnthonyPage />} />
+      <Route path="/competition" element={<CompetitionPage />} />
     </Routes>
   );
 }

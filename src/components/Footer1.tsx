@@ -41,8 +41,7 @@ const Footer: FunctionComponent<FooterType> = ({ className = "" }) => {
 
       {/* Phần bản quyền */}
       <div className={styles.copyright}>
-        ©2024 Mister International Company Limited dba Mister International
-        Organization. All Rights Reserved.
+        ©2023 Mister King International Company Limited dba Mister King International Organization. All Rights Reserved.
       </div>
     </footer>
   );
