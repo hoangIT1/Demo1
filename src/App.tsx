@@ -6,8 +6,13 @@ import {
   useLocation,
 } from "react-router-dom";
 import WLight1 from "./pages/WLight1";
-import MarkAnthonyPage from "./pages/MarkAnthony"; // <--- THÊM DÒNG NÀY
+import MarkAnthonyPage from "./pages/MarkAnthony";
 import CompetitionPage from "./pages/Competition";
+import NationalDirectorsPage from "./pages/NationalDirectors";
+import ContestantsPage from "./pages/Contestants";
+import PressPage from "./pages/Press";
+import BlogPostDetail from "./pages/BlogPostDetail";
+
 
 function App() {
   const action = useNavigationType();
@@ -34,6 +39,18 @@ function App() {
         title = "Mark Anthony";
         metaDescription = "Information about Mark Anthony.";
         break;
+      case "/national-directors":
+        title = "National Directors";
+        metaDescription = "Our official National Directors for the Mister International Competition.";
+        break;
+      case "/contestants":
+        title = "2025 Contestants";
+        metaDescription = "Meet the contestants for the 2025 Mister International competition.";
+        break;
+      case "/press":
+        title = "Press";
+        metaDescription = "Mister International Organization Press Site.";
+        break;
     }
 
     if (title) {
@@ -55,6 +72,10 @@ function App() {
       <Route path="/" element={<WLight1 />} />
       <Route path="/mark-anthony" element={<MarkAnthonyPage />} />
       <Route path="/competition" element={<CompetitionPage />} />
+      <Route path="/national-directors" element={<NationalDirectorsPage />} />
+      <Route path="/contestants" element={<ContestantsPage />} />
+      <Route path="/press" element={<PressPage />} />
+      <Route path="/press/:postId" element={<BlogPostDetail />} />
     </Routes>
   );
 }

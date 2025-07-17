@@ -2,6 +2,7 @@
 .pageContainer {
   background-color: var(--color-white);
   width: 100%;
+  overflow-x: hidden;
 }
 
 .mainContent {

@@ -4,14 +4,15 @@ import styles from "./Header1.module.css";
 
 export type Header1Type = {
   className?: string;
+  sticky?: boolean;
 };
 
-const Header1: FunctionComponent<Header1Type> = ({ className = "" }) => {
+const Header1: FunctionComponent<Header1Type> = ({ className = "" }, sticky = true) => {
   // State để quản lý việc menu có đang mở hay không
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className={[styles.header, className].join(" ")}>
+     <header className={[styles.header, !sticky && styles.nonSticky, className].filter(Boolean).join(" ")}>
       <div className={styles.headerContent}>
         {/* Logo */}
         <a href="/" className={styles.logoLink}>
@@ -43,9 +44,9 @@ const Header1: FunctionComponent<Header1Type> = ({ className = "" }) => {
             <a href="/">HOME</a>
             <a href="/mark-anthony">MARK ANTHONY</a>
             <a href="/competition">COMPETITION</a>
-            <a href="#">NATIONAL DIRECTORS</a>
-            <a href="#">CONTESTANTS</a>
-            <a href="#">PRESS</a>
+            <a href="/national-directors">NATIONAL DIRECTORS</a>
+            <a href="/contestants">CONTESTANTS</a>
+            <a href="/press">PRESS</a>
           </nav>
           <div className={styles.socialIcons}>
             <a href="#"><img alt="Facebook" src="/link--alttextlabelfacebook@2x.png" /></a>

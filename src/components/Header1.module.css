@@ -170,3 +170,7 @@
     max-width: 940px; /* Giới hạn độ rộng của menu */
   }
 }
+
+.nonSticky {
+  position: static; /* Hoặc 'relative' tùy vào bố cục bạn muốn */
+}
